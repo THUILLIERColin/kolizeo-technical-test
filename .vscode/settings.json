@@ -1,0 +1,33 @@
+{
+  "git.autofetch": true,
+  "git.enableSmartCommit": true,
+  "git.confirmSync": false,
+  "github.copilot.enable": {
+    "*": true
+  },
+  "github.copilot.editor.enableAutoCompletions": true,
+  "github.copilot.chat.commitMessageGeneration.instructions": [
+    { "text": "Use Conventional Commits strictly." },
+    { "text": "Format: <type>(<scope>): <subject>" },
+    { "text": "Types: feat, fix, docs, style, refactor, perf, test, chore, ci, build, revert." },
+    { "text": "Scope: optional, lowercase, repo-specific (e.g. auth, ui, api)." },
+    { "text": "Subject: imperative, lower case, ≤ 72 chars, no period." },
+    { "text": "Body: why + what changed; include context from diff in bullets." },
+    { "text": "Footer: refs (#123), BREAKING CHANGE: ... if needed." }
+  ],
+
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.rulers": [100],
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "files.eol": "\n",
+
+  "prettier.printWidth": 100,
+  "prettier.singleQuote": true,
+  "prettier.trailingComma": "all",
+  "prettier.semi": true
+}
