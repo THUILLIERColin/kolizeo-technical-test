@@ -1,7 +1,7 @@
 import { getRemoteConfigForClub } from '@/lib/remote-config';
-import { Alert } from '@/components/ui/alert';
+import { Alert, AlertTitle, AlertDescription } from '@/components/ui/alert';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import Link from 'next/link';
 import type { ClubConfig } from '@/types/unity';
 
@@ -24,9 +24,9 @@ export default async function ClubPage(props: { params: Promise<{ club: string }
         <div className="max-w-2xl mx-auto">
           <h1 className="text-3xl font-bold mb-4">Club : {clubName}</h1>
 
-          <Alert variant="destructive" className="mb-4">
-            <h2 className="font-semibold mb-2">Erreur de chargement</h2>
-            <p className="text-sm">{error || 'Configuration non disponible'}</p>
+          <Alert variant="destructive" className="mb-6">
+            <AlertTitle>Club non trouvé</AlertTitle>
+            <AlertDescription>{error || 'Configuration non disponible'}</AlertDescription>
           </Alert>
 
           <Button asChild variant="outline">
