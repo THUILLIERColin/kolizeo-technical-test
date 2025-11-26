@@ -55,7 +55,8 @@ async function getUnityAuthToken(): Promise<string> {
 export async function getRemoteConfigForClub(clubName: string): Promise<ClubConfig> {
   if (process.env.MOCK === 'true') {
     console.log(`[MOCK] Récupération de la config pour: ${clubName}`);
-    const mockConfig = MOCK_CONFIGS[clubName];
+    const configKey = clubNameToConfigKey(clubName);
+    const mockConfig = MOCK_CONFIGS[configKey];
 
     if (!mockConfig) {
       throw new Error(`[MOCK] Configuration non trouvée pour le club: ${clubName}`);
